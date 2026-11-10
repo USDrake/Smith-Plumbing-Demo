@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#153c2b" />
+  <meta name="description" content="Dependable hometown plumbing services in De Smet, South Dakota. Plumbing repairs, water heaters, and drain cleaning from Smith Plumbing." />
+  <title>Our Services | Smith Plumbing</title>
+  <link rel="canonical" href="https://smith-plumbing-demo.pages.dev/services.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Smith Plumbing">
+  <meta property="og:title" content="Our Services | Smith Plumbing">
+  <meta property="og:url" content="https://smith-plumbing-demo.pages.dev/services.html">
+
+  <style>
+    :root {
+      --green: #143b2a;
+      --green-dark: #103624;
+      --brown: #6d5140;
+      --ink: #343a36;
+      --cream: #fbfaf6;
+      --card: #f0f1e9;
+      --white: #fff;
+      --page-width: 750px;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-width: 320px; }
+    button, input, textarea, select { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    a { color: inherit; }
+    button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+      outline: 3px solid #a78468; outline-offset: 3px;
+    }
+    .page-container { width: min(var(--page-width), calc(100% - 42px)); margin-inline: auto; }
+    .site-header { background: #fff; border-bottom: 1px solid #f6f5f0; }
+    .header-inner { height: 91px; max-width: 590px; margin: auto; padding: 0 15px; display: flex; align-items: center; justify-content: space-between; }
+    .brand { display: flex; align-items: center; width: 205px; height: 81px; overflow: hidden; }
+    .brand img { display: block; width: 205px; height: auto; }
+    .header-actions { display: flex; align-items: center; gap: 28px; }
+    .icon-link, .menu-button { width: 42px; height: 44px; display: inline-flex; justify-content: center; align-items: center; padding: 5px; border: 0; background: transparent; cursor: pointer; color: var(--green); }
+    .icon-link { color: var(--brown); text-decoration: none; }
+    .icon-link svg, .menu-button svg { width: 30px; height: 30px; }
+    .navigation { background: #fff; border-bottom: 1px solid #e5e6df; }
+    .navigation[hidden] { display: none; }
+    .navigation-inner { max-width: 590px; margin: auto; display: grid; padding: 10px 16px 17px; gap: 5px; }
+    .navigation a { padding: 10px 12px; color: var(--green); border-radius: 6px; text-decoration: none; font-size: 17px; font-weight: 650; }
+    .navigation a:hover { background: var(--card); }
+    .hero { background: linear-gradient(120deg, #fbfaf7 0%, #fffdf9 53%, #faf9f4 100%); padding: 27px 0 31px; text-align: center; }
+    .hero-inner { max-width: 600px; width: calc(100% - 42px); margin: auto; }
+    .hero h1 { margin: 0 0 3px; font-weight: 800; font-size: clamp(42px, 6.6vw, 66px); line-height: 1.15; letter-spacing: -0.048em; color: var(--green); }
+    .hero .tagline { font-size: clamp(19px, 3.15vw, 29px); font-weight: 550; color: var(--brown); line-height: 1.25; margin: 4px 0 11px; }
+    .hero .intro { max-width: 590px; margin: 0 auto 17px; font-size: clamp(17px, 2.65vw, 23px); line-height: 1.27; color: #3c3c3a; }
+    .hero-actions { display: grid; gap: 11px; }
+    .button { display: flex; align-items: center; justify-content: center; gap: 25px; min-height: 64px; padding: 12px 18px; text-decoration: none; border-radius: 7px; border: 2px solid var(--green); font-size: 21px; font-weight: 700; cursor: pointer; transition: filter 160ms ease, transform 160ms ease; }
+    .button:hover { filter: brightness(1.08); }
+    .button:active { transform: translateY(1px); }
+    .button svg { width: 29px; height: 29px; flex: 0 0 29px; }
+    .button-primary { color: #fff; background: var(--green); box-shadow: none; }
+    .button-secondary { color: var(--green); background: white; }
+    .services { padding: 0 0 13px; }
+    .section-title { margin: 0 0 20px; display: flex; align-items: center; gap: 19px; color: var(--brown); font-size: 19px; font-weight: 800; letter-spacing: .18em; white-space: nowrap; text-align: center; }
+    .section-title::before, .section-title::after { content: ""; height: 2px; flex: 1; background: var(--brown); opacity: .9; }
+    .service-list { display: grid; gap: 12px; }
+    .service-card { background: var(--card); border-radius: 11px; padding: 10px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .98fr); align-items: center; gap: 30px; min-height: 198px; }
+    .service-card img { display: block; width: 100%; height: 180px; object-fit: cover; border-radius: 9px; }
+    .service-card h3 { font-size: clamp(22px, 3.2vw, 31px); color: var(--green); letter-spacing: -.035em; line-height: 1.15; margin: 0 0 13px; font-weight: 790; }
+    .service-card p { font-size: clamp(17px, 2.5vw, 23px); line-height: 1.31; margin: 0; }
+    .neighborhood { margin-top: 14px; padding: 19px 25px 20px; border-radius: 10px; background: var(--card); text-align: center; }
+    .neighborhood h2 { color: var(--green); font-weight: 800; letter-spacing: -.035em; font-size: clamp(22px, 3.5vw, 31px); margin: 0 0 6px; }
+    .neighborhood p { color: var(--brown); font-size: clamp(18px, 2.6vw, 22px); line-height: 1.27; margin: 0; }
+    .bottom-button { width: 100%; margin: 13px 0 0; }
+    .footer { background: linear-gradient(122deg, #133b2a, #173e2d 60%, #103724); color: #fff; padding: 20px 0 21px; }
+    .footer-inner { max-width: 680px; margin: auto; padding: 0 8px; }
+    .footer-main { display: grid; grid-template-columns: 1fr 1.03fr; gap: 55px; align-items: center; }
+    .footer-brand { text-align: center; }
+    .footer-brand img { display: block; width: min(100%, 300px); height: auto; margin: 0 auto 2px; }
+    .footer-brand p { margin: 0; font-size: 17px; }
+    .footer-contact { border-left: 1px solid #9caea2; padding: 0 0 0 60px; }
+    .footer-contact h2 { letter-spacing: .23em; font-size: 14px; font-weight: 750; margin: 0 0 12px; }
+    .footer-contact a { text-decoration: none; }
+    .contact-row { display: flex; gap: 18px; align-items: flex-start; margin: 0 0 10px; font-size: 16px; line-height: 1.35; }
+    .contact-row svg { flex: 0 0 22px; height: 24px; width: 22px; }
+    .contact-row.phone { font-size: 24px; font-weight: 800; line-height: 1.2; }
+    .copyright { margin: 17px auto 0; padding: 12px 0 0; border-top: 1px solid #819b8d; color: #baccc1; text-align: center; font-size: 13px; }
+    dialog { border: 0; border-radius: 15px; width: min(480px, calc(100% - 28px)); max-height: calc(100dvh - 25px); padding: 0; box-shadow: 0 18px 80px #0005; }
+    dialog::backdrop { background: rgb(8 30 19 / 0.62); }
+    .dialog-inner { padding: 28px; }
+    .dialog-head { display: flex; align-items: start; justify-content: space-between; gap: 10px; }
+    .dialog-head h2 { color: var(--green); font-size: 28px; line-height: 1.12; margin: 0 0 8px; }
+    .close-dialog { border: 0; background: var(--card); cursor: pointer; border-radius: 100px; height: 36px; width: 36px; font-size: 25px; }
+    .dialog-inner p { line-height: 1.43; margin: 5px 0 17px; }
+    .form-field { display: grid; gap: 4px; margin: 0 0 11px; font-weight: 650; color: var(--green); }
+    .form-field input, .form-field select, .form-field textarea { border: 1px solid #b7c1b6; border-radius: 7px; padding: 10px; background: white; color: #263b2e; width: 100%; font-size: 16px; }
+    .dialog-action { margin-top: 15px; width: 100%; font-size: 17px; }
+    .fineprint { font-size: 13px; color: #575b57; margin-top: 14px !important; }
+    .noscript-msg { padding: 5px 18px; text-align: center; }
+    @media (max-width: 800px) {
+      .page-container { width: calc(100% - 34px); }
+      .hero { padding: 35px 0 25px; }
+      .footer-inner { padding: 0 21px; }
+      .footer-main { gap: 25px; }
+      .footer-contact { padding-left: 25px; }
+      .service-card { gap: 18px; min-height: 180px; }
+      .service-card img { height: 170px; }
+    }
+    @media (max-width: 520px) {
+      .header-inner { height: 79px; padding-inline: 18px; }
+      .brand { width: 170px; height: 75px; }
+      .brand img { width: 174px; }
+      .header-actions { gap: 15px; }
+      .icon-link svg, .menu-button svg { width: 29px; height: 29px; }
+      .hero { padding: 39px 0 25px; }
+      .hero-inner { width: calc(100% - 38px); }
+      .hero h1 { font-size: clamp(38px, 10.5vw, 51px); }
+      .hero .tagline { font-size: 19px; margin: 9px 0 12px; }
+      .hero .intro { font-size: 16px; line-height: 1.4; margin-bottom: 18px; }
+      .button { min-height: 57px; font-size: 17px; gap: 15px; }
+      .button svg { width: 24px; height: 24px; flex-basis: 24px; }
+      .page-container { width: calc(100% - 36px); }
+      .section-title { font-size: 13px; gap: 10px; letter-spacing: .16em; margin-bottom: 14px; }
+      .service-list { gap: 11px; }
+      .service-card { grid-template-columns: minmax(0, .92fr) minmax(0, 1fr); gap: 13px; min-height: 162px; padding: 8px; }
+      .service-card img { height: 153px; }
+      .service-card h3 { font-size: 20px; margin-bottom: 7px; letter-spacing: -.045em; }
+      .service-card p { font-size: 14px; line-height: 1.28; }
+      .neighborhood { padding: 17px 12px; }
+      .neighborhood h2 { font-size: 22px; }
+      .neighborhood p { font-size: 16px; line-height: 1.37; }
+      .footer { padding: 26px 0 22px; }
+      .footer-inner { padding: 0 24px; }
+      .footer-main { grid-template-columns: 1fr; gap: 21px; }
+      .footer-brand img { max-width: 280px; }
+      .footer-contact { padding: 21px 0 0; border-left: 0; border-top: 1px solid #819b8d; }
+      .footer-contact h2 { font-size: 15px; margin-bottom: 15px; }
+      .contact-row { font-size: 16px; }
+      .contact-row.phone { font-size: 23px; }
+      .copyright { font-size: 13px; margin-top: 20px; }
+    }
+    @media (max-width: 355px) {
+      .brand, .brand img { width: 150px; }
+      .header-actions { gap: 5px; }
+      .service-card { gap: 9px; }
+      .service-card h3 { font-size: 18px; }
+      .service-card p { font-size: 13px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      :root { scroll-behavior: auto; }
+      .button { transition: none; }
+    }
+  
+.site-header .brand{height:auto;overflow:visible}.site-header{border-bottom:0}.header-inner{justify-content:normal}.site-nav a{color:var(--green)}
+.site-header{ background:#fff; position:relative; z-index:5; }.header-inner{ height:108px; max-width:1360px; margin:auto; padding:0 50px; display:flex; align-items:center; }.brand{ flex:0 0 225px; display:block; width:225px; line-height:0; }.brand img{ width:225px; height:84px; object-fit:contain; display:block; }.site-nav{ margin-left:72px; display:flex; gap:45px; align-items:center; }.site-nav a{ font-size:18px; text-decoration:none; font-weight:400; white-space:nowrap; transition:color .15s; }.site-nav a:hover, .site-nav a:focus-visible{ color:#846447; text-decoration:underline; text-underline-offset:5px; }.header-phone{ display:inline-flex; align-items:center; gap:12px; margin-left:auto; text-decoration:none; white-space:nowrap; font-size:29px; font-weight:700; color:var(--green); }.header-phone svg{ color:var(--brown); width:27px; height:27px; }.header-phone:hover, .footer-phone:hover{ text-decoration:underline; text-underline-offset:4px; }.menu-toggle{ display:none; background:transparent; border:0; color:var(--green); cursor:pointer; padding:8px; }.menu-toggle svg{ height:27px; width:27px; }@media (max-width:1050px) and (min-width:801px){.header-inner{ padding-left:50px; padding-right:39px; }.site-nav{ margin-left:72px; }.header-phone{ font-size:28px; }}@media (max-width:950px) and (min-width:801px){.header-inner{ padding:0 30px; }.brand,.brand img{ width:200px; }.brand{ flex-basis:200px; }.site-nav{ margin-left:34px; gap:25px; }.site-nav a{ font-size:17px; }.header-phone{ font-size:22px; gap:7px; }.header-phone svg{ width:22px; }}@media (max-width:800px){.header-inner{ height:82px; padding:0 22px; }.brand{ flex-basis:190px; width:190px; }.brand img{ width:190px; height:auto; }.header-phone{ font-size:19px; gap:7px; margin-left:auto; }.header-phone svg{ width:22px; height:22px; }.menu-toggle{ display:block; margin-left:14px; }.site-nav{ display:none; position:absolute; left:0; right:0; top:82px; margin:0; padding:15px 22px 20px; flex-direction:column; align-items:stretch; gap:0; background:white; box-shadow:0 9px 14px rgba(0,0,0,.12); }.site-nav[data-open="true"]{ display:flex; }.site-nav a{ padding:12px 4px; font-size:19px; }}@media (max-width:600px){.header-inner{ height:76px; padding:0 18px; }.brand{ width:170px; flex-basis:170px; }.brand img{ width:170px; }.header-phone span{ display:none; }.header-phone svg{ width:25px; height:25px; }.menu-toggle{ margin-left:14px; }.site-nav{ top:76px; }}
+a.service-card{text-decoration:none}a.service-card:hover h3{text-decoration:underline}
+</style>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a href="index.html" class="brand" aria-label="Smith Plumbing home"><img src="data:image/webp;base64,UklGRswZAABXRUJQVlA4IMAZAADwWACdASrgAFQAPhUIg0EhBN45wQQAUSygGajxmpZVVQO8l9kPrvKRyq9feUDzj/uPvU+fn+n9Wn6f/5nuD/rl+rnWz8y/7O/sR7rP+w/aX3Xf2H/L+wL/Nf7d62f/B9nj0F/2z///rxezR/Zv+v6V3//7P/UP9Bvxl/Xj1n8sHn/1o/b3/MdIeI78r+/f2D8cf7b/tP9F0r90b4DvyD+X/0/8X/7B/0P9t6xn4zejZaL7ZvgU9R/k39//t/7S/3D9svc8/xfTL5hfxV+gD+O/y7+7fkH+8v1N/zfIa+//7r2BP5J/T/8t/Zv8P/lf8z///on/yPzV/5nuk/Qv8d/sP8l+6H+Y///4Cfx3+af3/+1f5X/g/3j//f7/ygft37Jn69JAqs0WeXmZWvszE+nhleTW8T46/2JBpJE6Va+JvjBuQQkDd1Nzr343EWgjCZbcd+DVgQJtW+uXrpG2kp3yU+6AaGN8IzNupK11ugy2AcLKVmER2N/niTKk9UcwiGjro6afJvjhrvo6UqF0JC9BrzT7X/7iNMSAHVj4/OK2AGY6Vbjvqzc4e2fNZF8qeoo8jUQIGkp6/H4QdrqchvJSyILWptsThUr3oLDTpqtyElvCJfPyUD4OeTQSjjw6k4+dYz3abSwojIQAoJoZVbw8Mmg07RP59zBi+X1Sx29UpsgQeSfCJHnfFFL+OXkKBjXRL/UOaD0nDFZk57V+XOF1Rw5ycUfLRKO1hu0T3DIISbmFy0FFtBUGxhSIrOc9t0vdAYE+Et+nSuxeWL+IIqVQSoihmSfmpXu/Rfriomd087zp6m9LzuYIt4HUzLdc3fbkISDUSUkTfWkflI9Gk3MEYu6FymfHuRB+bQYLDpOnHmhwHTFVrCiswTsXkJGGXPUMYKRrk8xwHL0EPaYDjL5d4+2x8D/kaXkuGJ1cQycRRLaZlNjh3X4H+QCh8mXlzIAA/v+2zUt/aKunAqmjNZKot9yUZwhQa447BOVWwqMQzasz/IGrjTVfbVUAB0jMIF/kk9EU/Z4DusT1e8/A/+dyrdBnX23E04hNmC9nzfVALLPGqdiq0GQ3l0X0gVsYXXJau+fFekqOsgJiS1Kztn00XizrfyTFkCrq/+hk3i7yWGQlotU+9RdpwJFxzhzHwgbNrt3Y4EYE3ftLp5aSbLwdH3NjKbxRjWhHZVLNCymPbRv+XftTCtAsPp99iEwpCrgn4tTjdPOpQDWTvCflUz775cFY9F7YoZ2iWjLRBB0gGTXBFEbTyJI1CYLCY4DVUIft97RCceJoAzgJIw8fARNsRFlpsLdnUdquC9yeJnszd0QqryKvf6zU30ExO60iAl4FDyob9dm45fPRLzpR+gMvcXa9pfK4sZmQ5aMkM6cvUZOJnv8c0YkzfXjFqvdFAGgKFcbBRN5vYmZQfsILseONJgGRSOA03fj25BRBBUfL0pTr4Gf2xLInr0jSsKln2YAUSXW5sJXRcc2k6vUueqfe9Sj2UWtYMWGiIB/7KZj8CM3CySnNIx1nnwCN3lR4A+SakIMWCV1pfTsY8NEJl2iuOQgHxgZEIg8Zpm3Em301Rmuhkuj1w4OxIIFz0rtcF5eQK2cqYcjRT+OQjmIkk/VmpWo011IX7bP3csvD9EWCc3+H+UlcFvESth/vB0VrXCB1rjv4dPjDtx7Y6pTnvnXy+qh3LqKRQf51964F2087yq/EP4nLbvczchh1gtJTbogg6wcEyR+uuoaYN0HdLiPkgXiozDMR7+ZgNdakFmvvwdbDN0so7IPh0+2a0jeDT0H6FQaNhSFvWvu1SV3Z6cybcS/crBUbMEbQxwTeu/aGDbnpTuHILP4oFm1C4iPGWWPk3onybL98t2U1XlhuP9XU/56x7ZeIMp4fCTFHpsM8V7YODB0lPZ5BNhF++jmCgNPnQmu70iQvbdAoE1B+jUQXaseSVwkPopc2zRRnmcWHNf4neScW36qUUazzZilF4O6Gwj3W0bJ94PJOC/iHKtSOAqlYaI66vip3HxPTXPR/4njOXoni7Ds54Es8JsKPw2ebFtvJFWCLkrTPEikqtKm/E23+RqCPB2E1JLeiSK1ea2gIUf8FkqnyRSLDeER1tsk81mR6vsADjJ98knv3arSuIcebtujwDDdjYOnT3P4ZwrpUvGZCepN9vnqzMcccbs2E/+COdAQnm6bxWZx3+WKmjN7rZhbDnSqrHoDC76kDereaP4MvxLyAA0Ldxib2dEGbxs15/daG1+oJ61b/phCk+GTkfDg50KGacH9Q7vi6+ZC+pzlMZQ1Tjkw0PFpQfLgpxktR520vDPC5d985jF7wQgG1PLWPW5b3mubkdC8LUF3RCqDrV97lw8yHubqNjO7s4zACn7kAOihJRrME5xoK6643AADzL+H2wDFDBDaBN8IoDWpg/rUPNL4+rWI9OmljOh4p7yCOq2BeZcuGussUDwrOt5kOjLZoCiTK64ftfWIRGJ43+c3/5xNYBzljqXVC14fOe5iivpVqdVrXVzsWVRlK7hBN7cpb5pOrycPuXkTq7MH01qZhsXf5xScg/DBqjnzgGfKbOi1kh6pQ9WLzpgO2nms+JBoP+N6sheBhpeQ8AyG52n8YmxbB0E+7ytNPCeVukvMmaIiYbPJQWLuWjfOFR7l/uuq3gDNl8w/ea7sHR5Oj/djEwlMr+4NjjE8w/L4s/x7jK+wSc26H9p3w8ASfiiGuXoWg9C6aFnuailwzXfyDEF6u8p3OzrbuISVCeo4Nj6eVR06oEPt2xy8snwaNESLWwUYD/xoGh5XqGSSQBkj6ifodpTxEKZMpY6IWI3T0pUGkbnwFYLWbStoOBCf7b4iAjGNI06XejhpMavCJIOIBhEH0V/U62PPnKrPq74KnIQUIMeLInvUaUkxLHOlnLpQkWAz+G5ovejpwgFcPivAb0wt752Ve4VJSLMalL59yQ8ri5PC/djpyCkgR2gj7uS8SuKI8dM5Y1fSSry6qLv7Xm4lI7kau4huUoEXiW9CvgBmE6k5OkSYA1uReGruo0mOLycfyOUIDwPcdD0rbMbSSgES5Gh70I8d/WSevlmxY9vup99SC1QslRcSvgl3hJzoFLHh/EvMJcbpCXYRf1mkufVyt1tY6uNeqdwkqJ0pzTn10Hoi/K/QYlLX/LPN3P+Pd8tmAUDpuxuPBHupj/zTBGJ18+8lA6exyeioD0NTdGQZptUG83bW3R2jSNihnu6O3Hoxi6XmnkjjdkTL0YbciGrXmlnTOInthCermlEZFyG/EfIm7TVwUgGJMPwjvGnFwOsrSHMr1ynrpQ/Q0aVfsrnGnQroo0JxmeCSpcf3+xaZE4pj11B8+R1dcaD03G6bk0DMU6Lol32lxt+/PBSkZHMxKwhqFRVmEfMXZyzWzqv5KE2tZ+YRw3f8RgbPb/EzGySNl4axu84Nn80HEwItoWSDjIzUSeJ2kCXKqkrYlyqFPW6yzf3HS+AsKY+nC+iBXu5oeZnaddolw2ItWBHYte9mGQ4mY1tev///HUws0fFfXM4aoUKxj8gaMdTfLkgII/uvl/znnRjUE20C/9/PAJOa21PWRnGKTKTxzvF+oTfDOglXlcoWCriNVxq/iahcNFfH9tJ/xHI8kaPSvCV7mx3/V9qQ0i2z/HuQnDcwCjnTn2wcuowF3rHot7wvkHpZdTqse0xwerIaAMOqChiefKmoLWTiY91p5FllohHKaZu4pvFlk38J8aSkfDzQL9qv5ItGC6g74KzoOPbIgWLqpnfngJk06s7bE+a6u5vBofnvMxhKmLYPTHS2tIHCDewUvINbqt8sOUgqxkddbKF4sHhWRKvLpTst8dU/Yf5yCoOj1Rb0zIL2D3c3aYpR8gOL9YoyiS3NxSTcfMUfJqy1C+xNBR+hOhsBh6wPVw3uYZ0atZiZeRniPuDOZRW7S+/fv8+aGaRMqAt2j1pFljdnJB4pbXaWPBo1U7lKaModyWqAS7nH/1cwIZ0AmsC/mhCTKQor771l6Fz8WwUMuybFfMqLUNCA4cL6DybaEt/g1yvBnzOlug0P79G4QIpORV7Ut8c7OoMpkUwdMyVfVM+L0y1OU32o+wlgSgyQs1vQr4JNnMwWs7Tn1MEAGhc2G5Vre/qdUTQdlwDvLhWOQ+FMr3wPjvT/y/v3QZ9AWGU7vIdZweUBG//ztqb/l4bJj/dyxC3KUbSyVb8crfhV4NtrAnCuQtA1QZC4IuEmQ5g4DrmNxSH++napf+2+F4YhQc+FVnxTksX5IwFEIc+NXTrz7TL/dQrkC+QE2iM5mxUE0V+AClX2aKHTnY2xx+Xw7TfoGaS/IA3D25FtF+5HerdGElVT/JFN7SQUucGBkh6Uu1sSD0kbdqmHisWb+K8VZdrZf7KGzTeoiwmY3KqHImcCDE1/XL62aMpysgdBCzt+IajNsVjzQz7bO+g7zcFlRzFbohbZXrYDRGc9TIwfPm+lojazDTpOmhVEilfTUC0id1/98NjFuU4pGVKVRXoVbyah1OAkhXW3RIJDpl2na6TWr90oj7ooYzTGriEnA/g8PkfSYUYGm9VOYy7e9IvgOfaxgeUcc1wUhmZcva+bc4oAtU1iORXv2QNQe0u8mH/csaqz2Z+FADgWVSv5/DADoi56EBB7CkmZujGBbX3c+LTqrtH7NKkFa7PT3Y5Q74fFg14MRqkid9L8wHzTqK5Ep2Z0r6/XbCUtAWn09G4aylxztP2yTTqxo8r6M1VlML1OoAYgrj1U2boB5Oi1XfdWM/wjbK3yXTfAhVHwcwnyKDYOid93LL8aiYlkIq2cbLG+EbXpR6ga9mU1hnrkgd9+4sc49adjOyV7LfmC55YzEqtWHAnxdYt96/LwCF42Gn9T8xyX4T1KejzmVOY63UKvScKhom/DJEAmmWLqy48w8ZmcPr4tDbqoNu4cOUF9khp3evviYiJCaWM07warYjn97Sf2pz3EFSHba65fXDMX/QSN6wRbTOrtz1uWgkKg+JbFS/WxfFWI1M05knfeJsjU/1h2MCIysKdiJY+vV5U4F+Bsf2gDwYXKoz8U5U7OK0Uzl3yh85rORUSnEZgCeK4kSWFgKTkx9Fbf7KxKWbGuTDpo0pEEIqZNCOLNdcG1pEZU0rpqYztfuekcxblvyRhEfgKePxBM3Ao5w2bP5n8EtC7m9gWkZk7wdSvuWqd88RV1ZmPlHBcDTHtqi4ATcIvyCaDLxQ/AUVRxlxvZAwdUWLJ4vwDE3+IBHfeS6mY3kiXhtBIaMXX3mGvWmNkek+PcxyJQmhfBPco30P5KI2bPwaxz+F4uzRl7ZG4BNKM7++kxWXuTJwnYkYiqXkGZ2zgYCLV78ge+W4nKaAKy8w15b/o35eskp1On0xNOgaY72yCbJpivgE22ysdNtFCLnKff6+bCUoFg9zXu4ZCkLPhPxecoV3upsgOTPRgsjI8BJG+jIrzcWWRV+BVU3QeM90P1QO4o8nQk8FLIyzeTRIVPqkA91lu9vzu9zbUdZopwwYG/lbHI8xwi3h7o0nrerhBX9OjIgitBxSCiPoQbAHtzqsMLCoNZICbFYXx7FLBO2VZvSKa7dXG+SVBm3GaQI+7xfNNekzFFlhI1ut2ySgGGXgHZtxZDw+F6mA4UCZbUL8W7eBZTWWZfPT8Ynm8emRIT+4GVTilHB9qRQcg0aF5qlFjO3i/RBz3LmNe2mnR08gFxu6cFr8fkPey0mVllKCRn+1f/V7pJ/XUEso9l8ndHnEnQ8PXx+NiS3vUeld1UUxG/ZE/GcvLclDp/Iccv4jDjE73m9vfu3kEk5O8iG3zzqeeB3ICZjMwBiTY6JcB1EvM3dljYWtDKUhx/4f/zCeLo/Z6Td06s3cmZk7eM2fwcd/iFSL5BcvTS8QoY60m5x+Br6xj2/d8wAl9ERI5iljcL1qxeAcNcH/QFLGHCmmC/Vh5C0PyPG6LfpxqlbCN2xCRUjwri7jqin7aHM/mOCIeCEspuIdzJ9jF91IbuAtHbNnZZodzGiS4WzmOFLu99n+DSa03Dx9oN2FOEzauRvH6mbF750Tkc41MYZIbujWEkFL3/Kcjg5DjUzQvHyP1B5eJT+aRCmwfXC/xH263NwO6w0vs5puVOR2kjHw0hGiDDqMDYMiN5PbWkTbcZstkRM6vA8Lqk8Eflj0rLj25CnxpQBtWUHtwd+/3G1kzQR67Y2qFqn/BZ2xHf/XyRxxvLMqYuus9Ug9TqAzdyjIVFZ7WiZlwX4OYhE6B+92spsRnWUETA0NRY41B6Q0X/WTYXazb4Xsyn0b1tVTE7bDvvBcZ+mSkhbRXs/apYV5iSnOLHBcGAxbsGYPuxmTaC6qH0G8cI/6h16zagWv15lcRXAsl2ZjmACOTn+dWADGWR6PZW473xWM3SbPqcOYxj3aMepUOn6Mb888A+nPfsvjQv1/hXdQJjZ1l0DBpMfvu4p90ZQbyfC6TeS7bCIJItTHWdbGXWJGPj9A5PWDh7qtd/jclwSqCnsZsmLGXQtEBaDSe6X2EP0YveUFKVIrIswr/UUUWHwih1/g+UCmCfKXmbP2OAh7WtawZVMvL2iV1kA2F3Fj2lCF1OI9+Wvtg0szTG0QCScnQKl0F0FPASt5xXSU3lCG6QNHRmaIuqNIxG87TBcv/WSzyvlpC8RPh3DWrCeZmxD6oAZ4snvJLkqHk2elGXFIKeuOXzK5WcqetirsdArf/78x/KxJ//zMmoZIYpuS5PpeFkj600RmkTFZiH9n/0287qnTTmCwEJJF+32SwGPpfxpx6iS9MKokrZ7jOJmDjt29QDVxNCAn238nlIcz5arJyOxj0DnqLIP29EKis1l3tUzN64EcSNeR/dyhgofe7SxnYc+KhDREHuYKzgKCcILJ5CQ4V++BhR4CrK+7ZtgQ4BTu+FkG2G28tFAuyaygqHK5mqsSCtY0Vtk1RgH8+TjZ7ysY8LZXu40odJEwpe9iKUYpWc95OZG68Lu0ygdqL4e2tJWYz+g3DuSbcQ/qvnki/2Fz3exaBOnny5cNDEqABf3bFYRqkywHR3TvSwOtgciKiLeydsd4d+n53uAUqvbDtoqHNop/OiNtVPlbQe5MeadJtke5N9SUodbm1Pt2z3Z+B0wo+Yd3Qy80Ii205FcPffvbaqmT/mE0OsKxOJgqKzRxYGWFdO6P3WQub8AegsOhBX6P9vF7VAjCnOAhG3JP1yCVkrKxUhGRYO3/3uKAzGB8TUaRKip6ASnoeqp/2LlOF1N4qlOy40RG9QsCUf4JaWi2hoT8LQpGrI1V1h1i6W/V4mMoZVZ5D3qmXI9XnXTjkmA9bchjNe+GOo2O0WStO/1fH6/O45/FEA9bXQBB2OEWq88HO700QeeWayu8DSOHrmMqp65tRYOUeIy7efW7tjxPRps6k2kIwlwRuCVWv7j44E1MUXzoCcXNTHDS0iwJVuzD1OKEqMKUs+62nxPYs7Cj/hpArtK6R5SdD81U9ha656FlEXRyxVfhCbjNJtdDiWACNkchP0A/LtvEKlqPPMmunSP8rtneFUP+6lR8rTdqaKJwcoHl8pBtI28Zz5lUWk/GT1AFMLKWqTzMs6Tl9BNr1U/2z4XVGoDFEEuD1w5f+f6VmmfcA4vbJpE7JHfvTVJiipS2r46cUA0zpx6pIAVCNuQTzjwX3UP3SQNixtGIJPZDJoeW7hJQ/WyefQHUGxNiXxU+rXB293VADs6MS6iUHUCnlgaPQ4VCPycRntI8st+LFqwiqjCLmfaqS3O1jDE4tCfTm0CQQYxdvJM5VO4QZnnXsqkhMHHguAxkGz8xq4O1unFQvVnVmVf+tsHAqGBZTtvxbmso0rcnw17OATppLmMW/Gag49QqIRcesKWpF+2u8Xn660s35glZkS//hBieFHdUouPXoP4pGhH9bvpF+Fug+Mxdg6c895V11z+p2Q+dEoaMnnlWnVlnGzMRYVjTh3/txftPq5sy4etKPhAmsxdNlGkdyug2rKExa2heXnprYMP7uDr4JD7R1Yv8TVUkiPZGwVzSt3FoYgNcUCfgHI98FA6snrP9+p1oCC2v1xRuEEQoNTz9sV0jaFQtCPeCWrhYxNvjsSVGwrQ3OTDFPLaWm9f8NOs/+aUaBAaRLqdRSEadmQjuV/wikEu1XD6L3bNi/DRI6UVS/SZivsZ/Yg5DDYWne1JxmLuFpgkFEpT/v+hA+izNe0kx9dS2YcL8r6OWUxU9etj/0xez68+EYueyjuRxxdqRYOpDyM7VQX54xOGP+KInbxiDDNIldd1Ve83cVb4jeA7Kb1BcwAdaYheLxMWogOinRUp9HWfUwv+zDZgmfNpxvOSosVWTxt30c+dxeC+EWbsGHvRmxXwjMBxu6zXbZVY4eog01l5XxwQfbX+jYPSONAuvFc2eSsqfF8QWn/tislwgvYVba0nRbY5rxmtzAc2VoTwJ0wKbxSEi9n6amKb13vZ3q5W+DwTmmY8MKahPSYsBUUbs+51MvgX9qxyWGQzIw7IYNe+kMvdU+fbAKkLGiTuH/7nSP5eoriJVHEGPALQBBbr+R9cMy8qlcRO3jip5+PBN7lgJFXA7Pyzzc8CRFtCI8HWcvFrX3ZmCPlBHksEHtUgSxQPa5WMokUY4sEg1G24nVIjWun4wiVwnQulNlrIAVsy/2tJZHPWfhsEuzTcDjaGZNcX8ZA65Wcr5kYQEXVj06gBBi/+wrFKp16G9KAPlPWTMofmUab15lAyUL3nAAAQ10/+6gV2SKZoWEVYZEzBSVD3tSnEBGvH2qiZYgA2+ZxowNqF+vazudcCAAAA" alt="Smith Plumbing" width="225" height="84" /></a>
+      <nav class="site-nav" id="primary-nav" aria-label="Main navigation" data-open="false">
+        <a href="services.html" aria-current="page">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="header-phone" href="tel:+16055550147" aria-label="Call Smith Plumbing at 605 555 0147">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.1 15.1 0 006.59 6.59l2.2-2.2a1.1 1.1 0 011.13-.27c1.24.41 2.57.63 3.95.63a1.1 1.1 0 011.1 1.1v3.5a1.1 1.1 0 01-1.1 1.1C10.9 21.24 2.76 13.1 2.76 3.1A1.1 1.1 0 013.86 2h3.5a1.1 1.1 0 011.1 1.1c0 1.38.22 2.71.63 3.95a1.1 1.1 0 01-.27 1.13l-2.2 2.61z"/></svg>
+        <span>(605) 555-0147</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="primary-nav" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="services-heading">
+      <div class="hero-inner">
+        <h1 id="services-heading">Our Services</h1>
+        <p class="tagline">Reliable plumbing solutions for De Smet<br class="desktop-break" /> and nearby rural communities.</p>
+        <p class="intro">From quick fixes to essential home plumbing services, Smith Plumbing delivers dependable work, clear communication, and hometown service.</p>
+        <div class="hero-actions">
+          <a href="tel:+16055550147" class="button button-primary">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.7 10.8a15.1 15.1 0 0 0 6.5 6.5l2.16-2.17a1.05 1.05 0 0 1 1.08-.25c1.16.39 2.43.6 3.75.6a1.01 1.01 0 0 1 1.01 1V20a1 1 0 0 1-1.01 1C10.1 21 3 13.9 3 5.02A1 1 0 0 1 4.01 4h3.5a1 1 0 0 1 1 1c0 1.34.21 2.6.6 3.78.1.36.02.78-.25 1.06Z"/></svg>
+            <span>Call David (605) 555-0147</span>
+          </a>
+          <button type="button" class="button button-secondary" data-open-request>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1" /><path d="M7 3v4M17 3v4M3 10h18" /></svg>
+            <span>Request Service</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="services page-container" id="services" aria-labelledby="service-list-title">
+      <h2 id="service-list-title" class="section-title">OUR SERVICES</h2>
+      <div class="service-list">
+        <a class="service-card" href="plumbing-repairs.html">
+          <img src="assets/plumbing-repairs.webp" alt="A plumber repairing pipes under a sink" width="339" height="169" loading="eager" />
+          <div><h3>Plumbing Repairs</h3><p>Fixing leaks, clogged pipes, and other everyday plumbing problems.</p></div>
+        </a>
+        <a class="service-card" href="water-heaters.html">
+          <img src="assets/water-heaters.webp" alt="Residential water heater and connecting pipes" width="339" height="163" loading="lazy" />
+          <div><h3>Water Heaters</h3><p>Installation, repair, and replacement for dependable hot water.</p></div>
+        </a>
+        <a class="service-card" href="drain-cleaning.html">
+          <img src="assets/drain-cleaning.webp" alt="Drain cleaning cable being used to clear a kitchen sink drain" width="339" height="156" loading="lazy" />
+          <div><h3>Drain Cleaning</h3><p>Clearing stubborn clogs to keep sinks, tubs, and drains flowing.</p></div>
+        </a>
+      </div>
+      <section class="neighborhood" aria-labelledby="neighbors-title">
+        <h2 id="neighbors-title">Proud to Serve Our Neighbors</h2>
+        <p>Based in De Smet, South Dakota, and serving nearby rural communities with honest, high-quality plumbing service.</p>
+      </section>
+      <button type="button" class="button button-primary bottom-button" data-open-request>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1" /><path d="M7 3v4M17 3v4M3 10h18" /></svg>
+        <span>Schedule Service</span>
+      </button>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer-inner">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <img src="assets/smith-logo-footer.png" alt="Smith Plumbing" width="437" height="177" loading="lazy" />
+          <p>De Smet, South Dakota</p>
+        </div>
+        <section class="footer-contact" aria-label="Get in touch">
+          <h2>GET IN TOUCH</h2>
+          <p class="contact-row phone"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.7 10.8a15.1 15.1 0 0 0 6.5 6.5l2.16-2.17a1.05 1.05 0 0 1 1.08-.25c1.16.39 2.43.6 3.75.6a1.01 1.01 0 0 1 1.01 1V20a1 1 0 0 1-1.01 1C10.1 21 3 13.9 3 5.02A1 1 0 0 1 4.01 4h3.5a1 1 0 0 1 1 1c0 1.34.21 2.6.6 3.78.1.36.02.78-.25 1.06Z"/></svg><a href="tel:+16055550147">(605) 555-0147</a></p>
+          <p class="contact-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M7 3v4M17 3v4M3 10h18"/></svg><span>Mon - Fri&nbsp; 7:30 AM - 5:00 PM</span></p>
+          <p class="contact-row"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a8 8 0 0 0-8 8c0 5.2 8 12 8 12s8-6.8 8-12a8 8 0 0 0-8-8Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/></svg><span>De Smet, SD and nearby rural communities</span></p>
+        </section>
+      </div>
+      <p class="copyright">Concept Website &nbsp;·&nbsp; Fictional Business<br />© 2026 Pipe and Pixels. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <dialog id="request-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-inner">
+      <div class="dialog-head">
+        <h2 id="dialog-title">Request Plumbing Service</h2>
+        <button type="button" class="close-dialog" aria-label="Close request form" id="close-dialog">&times;</button>
+      </div>
+      <p>Tell David what you need. This creates a text message on your device for you to review and send.</p>
+      <form id="request-form">
+        <label class="form-field">Your name<input name="customer" autocomplete="name" required maxlength="80" placeholder="Your name" /></label>
+        <label class="form-field">Service needed
+          <select name="service" required>
+            <option value="">Choose a service</option>
+            <option>Plumbing Repairs</option>
+            <option>Water Heaters</option>
+            <option>Drain Cleaning</option>
+            <option>Other Plumbing Service</option>
+          </select>
+        </label>
+        <label class="form-field">How can we help?<textarea name="message" maxlength="700" rows="3" required placeholder="Describe your plumbing problem"></textarea></label>
+        <button type="submit" class="button button-primary dialog-action">Open Text Message</button>
+      </form>
+      <p class="fineprint">No information is submitted to this website. The phone number is fictional and must be replaced before publishing for a real business.</p>
+      <a href="tel:+16055550147" style="color:var(--green);font-weight:700">Or call (605) 555-0147</a>
+    </div>
+  </dialog>
+  <noscript><p class="noscript-msg">For service requests, call <a href="tel:+16055550147">(605) 555-0147</a>.</p></noscript>
+  <script>
+    (() => {
+      const toggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('.site-nav');
+      function setOpen(open){
+        nav.dataset.open=String(open);
+        toggle.setAttribute('aria-expanded',String(open));
+        toggle.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');
+      }
+      toggle.addEventListener('click',()=>setOpen(nav.dataset.open!=='true'));
+      nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setOpen(false)));
+      document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false)});
+      document.addEventListener('click',e=>{if(!e.target.closest('.site-header'))setOpen(false)});
+      const dialog = document.getElementById('request-dialog');
+      document.querySelectorAll('[data-open-request]').forEach(button => button.addEventListener('click', event => {
+        event.preventDefault();
+        dialog.showModal();
+      }));
+      document.getElementById('close-dialog').addEventListener('click', () => dialog.close());
+      dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+      document.getElementById('request-form').addEventListener('submit', event => {
+        event.preventDefault();
+        const data = new FormData(event.currentTarget);
+        const message = `Smith Plumbing service request\nName: ${data.get('customer')}\nService: ${data.get('service')}\nDetails: ${data.get('message')}`;
+        const destination = `sms:+16055550147?body=${encodeURIComponent(message)}`;
+        window.location.href = destination;
+      });
+    })();
+  </script>
+</body>
+</html>
